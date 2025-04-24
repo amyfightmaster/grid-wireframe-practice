@@ -7,9 +7,12 @@
     display: grid;
     grid-template-areas: "header"
     "aside1"
+    "column-wrapper"
     "column"
     "aside2"
     "footer";
+    grid-column: 1;
+    grid-row: 1;
     justify-content: center;
     align-items: center;
     color: white;
@@ -22,7 +25,8 @@
 }
 
 .grid-container > header {
-    grid-area: header;
+    grid-area: "header";
+    grid
     background-color: #9F2063;
     text-align: center;
     justify-content: center
@@ -32,6 +36,7 @@
 }
 
 .grid-container > div.aside1 {
+    grid-area: "aside1";
     background-color: #116395;
     text-align: center;
     justify-content: center;
@@ -41,18 +46,17 @@
     padding: 3px;
 }
 
-.grid-container > div.column-wrapper {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #26B67B;
+.column-wrapper {
+    background-color: #24B57C;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
     margin: 3px;
     padding: 3px;
-    width: 100%
+    
 }
 
-.grid-container > div.column {
-    grid-template-columns: 1fr 1fr 1fr;
+.column-wrapper > .column {
     justify-content: center;
     align-items: center;
     text-align: center; 
@@ -64,7 +68,6 @@
 
 .grid-container > div.aside2 {
     background-color: #25a4b5;
-    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     text-align: center; 
@@ -72,7 +75,7 @@
     padding: 5px;
 }
 
-.grid-container > div.footer {
+.grid-container > footer {
     background-color: #e06b26;
     grid-template-columns: 1fr;
     justify-content: center;
