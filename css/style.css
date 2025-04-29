@@ -26,7 +26,6 @@
 
 .grid-container > header {
     grid-area: "header";
-    grid
     background-color: #9F2063;
     text-align: center;
     justify-content: center
@@ -67,6 +66,7 @@
 }
 
 .grid-container > div.aside2 {
+    grid-area: "aside2"
     background-color: #25a4b5;
     justify-content: center;
     align-items: center;
@@ -83,4 +83,85 @@
     text-align: center; 
     margin: 2px 0;
     padding: 5px;
+}
+
+@media screen and (min-width: 769px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "aside1 column-wrapper aside2"
+        "footer footer"
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 100%;
+        background-color: #B1B5BE;
+    }
+
+    .header {
+        grid-area: "header";
+        background-color: #9F2063;
+        text-align: center;
+        justify-content: center
+        align-items: center;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .div.aside1 {
+        grid-area: "aside1";
+        grid-column-start: 1;
+        grid-row-start: 1;
+        background-color: #116395;
+        align-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 3px;
+        padding: 3px;
+    }
+
+    .column-wrapper {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        background-color: #24B57C;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        margin: 3px;
+        padding: 3px; 
+    }
+    
+    .column {
+        justify-content: center;
+        align-items: end;
+        text-align: center; 
+        background-color: #E4195B;
+        margin: 2px 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    div.aside2 {
+        grid-area: "aside2"
+        grid-column-start: 3;
+        grid-row-start: 1;
+        background-color: #25a4b5;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        margin: 2px 0;
+        padding: 5px;
+    }
+
+    footer {
+        background-color: #e06b26;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        margin: 2px 0;
+        padding: 5px;
+}
 }
