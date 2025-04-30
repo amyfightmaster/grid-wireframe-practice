@@ -40,7 +40,8 @@ header {
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 1fr;
+    height: 100%;
     margin: 3px;
     padding: 3px;
 }
@@ -48,20 +49,20 @@ header {
 main { 
     background: #27ae60; 
     grid-area: main; 
+    text-align: center;
 }
 
 .column-wrapper {
-    display: grid;
-    justify-content: space-between;
-    margin-top: 1rem;
-    
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 1rem;
 }
 
 .column {
-background-color: #c2185b;
-  padding: 1rem;
-  margin: 0 0.5rem;
-  text-align: center;
+    background-color: #c0266b;
+    gap: 10px;
+    align-self: end;
 }
 
 .aside2 {
@@ -70,6 +71,7 @@ background-color: #c2185b;
     justify-content: center;
     align-items: center;
     text-align: center; 
+    height: 100%;
     margin: 2px 0;
     padding: 5px;
 }
@@ -90,7 +92,7 @@ footer {
         .grid-container {
           grid-template-areas:
             "header  header  header"
-            "aside1    main    aside2"
+            "aside1   main   aside2"
             "footer  footer  footer";
           grid-template-columns: 1fr 2fr 1fr;
         }
